@@ -14,7 +14,8 @@ public class BlasterAnimado : MonoBehaviour
     void Start()
     {
         rig = GetComponent<Rigidbody>();
-        rig.velocity = transform.position + transform.forward * maxspeed; // ESTO PERMITE MOVITMIENTO DEL DISPARO, AÚN ESTOY DEFINIENDOLO BIEN
+        rig.velocity = transform.right * maxspeed; // ESTO PERMITE MOVITMIENTO DEL DISPARO, AÚN ESTOY DEFINIENDOLO BIEN
+                                                    // AHI DESCUBRI QUE EL 'forward' HACIA QUE EL TIRO INCREMENTE EN EL EJE Z, ENTONCES LO CAMBIÉ A '.right'
 
     }
 
