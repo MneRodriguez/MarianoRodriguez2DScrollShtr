@@ -7,25 +7,33 @@ public class ControlJgdr : MonoBehaviour
     //public Sprite spriteR;
 
     float maxSpeed = 40f;
+
+    public GameObject tiro;    
+    public Transform zonaSpawnTiro;
     void Start()
     {
-        //spriteR = gameObject.GetComponent<Sprite>();
+        
     }
 
     
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Instantiate(tiro, zonaSpawnTiro.position, zonaSpawnTiro.rotation);
+            
+        }
     }
 
     private void FixedUpdate()
     {
-        Vector3 pos = transform.position;
+        Vector3 pos = transform.position;   // MOVIMIENTO DE LA NAVE
 
-        pos.x += Input.GetAxis("Horizontal") *maxSpeed * Time.deltaTime;
+        pos.x += Input.GetAxis("Horizontal") *maxSpeed * Time.deltaTime;        
         pos.y += Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime;
                 
         transform.position = pos;
+        
 
         /*float MoverHorizontal = 
         float MoverVertical = Input.GetAxis("Vertical");
