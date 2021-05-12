@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public GameObject enem;
+    public Vector3 valoresSpawn;
+    public int contEnem;
+        
     private int score;
     public Text TextoScore;
 
@@ -20,15 +24,30 @@ public class GameController : MonoBehaviour
         gameOver = false;
         TextoRestart.gameObject.SetActive(false);
         TextoGameOver.gameObject.SetActive(false);
-        
+
+        SpawnearWaves();
+
         score = 0;
         ActualizarScore();
+
+        
     }
 
     
     void Update()
     {
         
+    }
+
+    public void SpawnearWaves()
+    {
+        for (int i=0; i< contEnem; i++)
+        {
+            Vector3 posSpawn = new Vector3(Random.Range(-valoresSpawn.x, valoresSpawn.x), Random.Range(-valoresSpawn.y, valoresSpawn.y), valoresSpawn.z);
+            Instantiate(enem, posSpawn, Quaternion.identity);
+            posSpawn.x--;
+        }
+                
     }
 
     public void SumarScore (int valor)

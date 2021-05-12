@@ -17,7 +17,7 @@ public class BlasterAnimado : MonoBehaviour
         
     void Update()
     {
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 8f);
     }
         
 }
