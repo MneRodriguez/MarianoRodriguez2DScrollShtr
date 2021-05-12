@@ -14,8 +14,7 @@ public class ControlJgdr : MonoBehaviour
     {
         
     }
-
-    
+        
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))
@@ -23,6 +22,7 @@ public class ControlJgdr : MonoBehaviour
             Instantiate(tiro, zonaSpawnTiro.position, zonaSpawnTiro.rotation);
             
         }
+        
     }
 
     private void FixedUpdate()
@@ -33,12 +33,6 @@ public class ControlJgdr : MonoBehaviour
         pos.y += Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime;
                 
         transform.position = pos;
-        
-
-        /*float MoverHorizontal = 
-        float MoverVertical = Input.GetAxis("Vertical");
-
-        Vector2 movto = new Vector2(MoverHorizontal, MoverVertical);*/
-                
+                                
     }
 }

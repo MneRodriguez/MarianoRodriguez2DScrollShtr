@@ -6,11 +6,7 @@ public class BlasterAnimado : MonoBehaviour
 {
     public float maxspeed = 100f;
     public Rigidbody rig;
-
-    /*private void Awake()
-    {
-        rig = GetComponent<Rigidbody>();
-    }*/
+        
     void Start()
     {
         rig = GetComponent<Rigidbody>();
@@ -18,29 +14,10 @@ public class BlasterAnimado : MonoBehaviour
                                                     // AHI DESCUBRI QUE EL 'forward' HACIA QUE EL TIRO INCREMENTE EN EL EJE Z, ENTONCES LO CAMBIÉ A '.right'
 
     }
-
-    
+        
     void Update()
     {
-        //rig.velocity = transform.forward * maxspeed;
-        //rig.velocity = transform.position * maxspeed;
+        Destroy(gameObject, 1f);
     }
-
-    private void FixedUpdate()
-    {
-        Vector2 OrigenDeTiro = transform.position;
-
-        //rig.velocity = transform.forward * maxspeed;
-
         
-
-        //r2d = new Vector3(maxspeed * Time.deltaTime, 0);
-        
-        /*Vector3 OrigenDeTiro = transform.position;
-
-        Vector3 velocity = new Vector3(maxspeed * Time.deltaTime, 0, 0);
-        
-        OrigenDeTiro += transform.forward;
-        //transform.forward = OrigenDeTiro;*/
-    }
 }
