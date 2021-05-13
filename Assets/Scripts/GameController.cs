@@ -18,6 +18,9 @@ public class GameController : MonoBehaviour
     public Text TextoGameOver;
     private bool gameOver;
 
+    public float TiempoHastaSpawn;
+    public float TiempoHastaEmpezar;
+
     void Start()
     {
         restart = false;
@@ -25,7 +28,7 @@ public class GameController : MonoBehaviour
         TextoRestart.gameObject.SetActive(false);
         TextoGameOver.gameObject.SetActive(false);
 
-        SpawnearWaves();
+        StartCoroutine(SpawnearWaves());
 
         score = 0;
         ActualizarScore();
@@ -39,13 +42,15 @@ public class GameController : MonoBehaviour
         
     }
 
-    public void SpawnearWaves()
+    IEnumerator SpawnearWaves() // RUTINA QUE GENERA OLEADAS DE NAVES ENEMIGAS CADA CIERTO TIEMPO
     {
         for (int i=0; i< contEnem; i++)
         {
-            Vector3 posSpawn = new Vector3(Random.Range(-valoresSpawn.x, valoresSpawn.x), Random.Range(-valoresSpawn.y, valoresSpawn.y), valoresSpawn.z);
+            yield return new WaitForSeconds(TiempoHastaEmpezar);
+            Vector3 posSpawn = new Vector3(Random.Range(+valoresSpawn.x, valoresSpawn.x), Random.Range(-valoresSpawn.y, valoresSpawn.y), valoresSpawn.z);
             Instantiate(enem, posSpawn, Quaternion.identity);
-            posSpawn.x--;
+            //posSpawn.x--;
+            yield return new WaitForSeconds(TiempoHastaSpawn);
         }
                 
     }
