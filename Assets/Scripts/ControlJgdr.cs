@@ -10,6 +10,8 @@ public class ControlJgdr : MonoBehaviour
 
     public GameObject tiro;    
     public Transform zonaSpawnTiro;
+
+    
     void Start()
     {
         
@@ -35,4 +37,6 @@ public class ControlJgdr : MonoBehaviour
         transform.position = pos;
                                 
     }
+
+    
 }

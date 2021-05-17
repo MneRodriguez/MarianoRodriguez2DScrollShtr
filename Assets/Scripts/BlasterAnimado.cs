@@ -7,6 +7,7 @@ public class BlasterAnimado : MonoBehaviour
     public float maxspeed = 100f;
     public Rigidbody rig;
         
+
     void Start()
     {
         rig = GetComponent<Rigidbody>();
@@ -20,4 +21,5 @@ public class BlasterAnimado : MonoBehaviour
         Destroy(gameObject, 8f);
     }
         
+
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1095712093752249024
+--- !u!1 &6773351511443736338
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2992462331583258316}
-  - component: {fileID: 6655418950749149884}
-  - component: {fileID: 674236536807925476}
-  - component: {fileID: 659746073}
-  - component: {fileID: 2923039211139655449}
-  - component: {fileID: 1509302825551150419}
+  - component: {fileID: 84048376520756627}
+  - component: {fileID: 4112169959833600493}
+  - component: {fileID: 5840355862388354778}
+  - component: {fileID: 3915696683622411523}
+  - component: {fileID: 1368210069061987859}
   m_Layer: 0
-  m_Name: SpriteNaveEnem
-  m_TagString: Enemigo
+  m_Name: blasterBoltEnem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2992462331583258316
+--- !u!4 &84048376520756627
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095712093752249024}
+  m_GameObject: {fileID: 6773351511443736338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.9, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6655418950749149884
+--- !u!212 &4112169959833600493
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095712093752249024}
+  m_GameObject: {fileID: 6773351511443736338}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -74,38 +73,59 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bcf1c132ca128f449aa115317a784229, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d75ebbc15d717c246b7d94a91ddf5539, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.4, y: 8.59}
+  m_Size: {x: 5, y: 1.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &674236536807925476
+--- !u!114 &5840355862388354778
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095712093752249024}
+  m_GameObject: {fileID: 6773351511443736338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b862263aa65b8294bb0691c021421569, type: 3}
+  m_Script: {fileID: 11500000, guid: 7368b0c67d17bb64f81e9da8cff22046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxspeed: -10
-  rig: {fileID: 659746073}
---- !u!54 &659746073
+  tomarJugador: {fileID: 0}
+  tomarDisparoJgdr: {fileID: 0}
+  tomarEnemigo: {fileID: 0}
+  tomarDisparoEnem: {fileID: 0}
+  ValorScore: 0
+--- !u!114 &3915696683622411523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773351511443736338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1f86b57fba0aa479e8defba82764e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disparoEnem: {fileID: 6773351511443736338}
+  spawnDeDisparo: {fileID: 0}
+  retrasoDisparo: 0.5
+  cadenciaDisparo: 1.1
+  velDisparo: 100
+  rig: {fileID: 0}
+--- !u!54 &1368210069061987859
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095712093752249024}
+  m_GameObject: {fileID: 6773351511443736338}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -114,41 +134,4 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
---- !u!114 &2923039211139655449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095712093752249024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7368b0c67d17bb64f81e9da8cff22046, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tomarJugador: {fileID: 0}
-  tomarDisparoJgdr: {fileID: 4616068321683191878, guid: 0ec635af05615b945aa6a131517941ae,
-    type: 3}
-  tomarEnemigo: {fileID: 0}
-  tomarDisparoEnem: {fileID: 0}
-  ValorScore: 0
---- !u!114 &1509302825551150419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095712093752249024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f1f86b57fba0aa479e8defba82764e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disparoEnem: {fileID: 6773351511443736338, guid: 019094d485a07e54b9b81f9334cf6b8d,
-    type: 3}
-  spawnDeDisparo: {fileID: 0}
-  retrasoDisparo: 0.5
-  cadenciaDisparo: 1.1
-  velDisparo: 100
-  rig: {fileID: 0}
+  m_CollisionDetection: 0

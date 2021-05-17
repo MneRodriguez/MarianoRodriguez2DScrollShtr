@@ -90,9 +90,10 @@ GameObject:
   - component: {fileID: 4616068321683191877}
   - component: {fileID: 4616068321683191883}
   - component: {fileID: 4694093285949177883}
+  - component: {fileID: 3573000196833006400}
   m_Layer: 0
   m_Name: SpriteTiro
-  m_TagString: Untagged
+  m_TagString: TiroJgdr
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,4 +142,22 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
+--- !u!114 &3573000196833006400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4616068321683191878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7368b0c67d17bb64f81e9da8cff22046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tomarJugador: {fileID: 0}
+  tomarDisparoJgdr: {fileID: 0}
+  tomarEnemigo: {fileID: 1095712093752249024, guid: 501ba45383ba544428c2071893910cf4,
+    type: 3}
+  tomarDisparoEnem: {fileID: 0}
+  ValorScore: 0
