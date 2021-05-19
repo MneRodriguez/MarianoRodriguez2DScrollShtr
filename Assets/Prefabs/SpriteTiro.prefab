@@ -88,8 +88,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4616068321683191877}
-  - component: {fileID: 4616068321683191883}
   - component: {fileID: 4694093285949177883}
+  - component: {fileID: 4616068321683191883}
   - component: {fileID: 3573000196833006400}
   m_Layer: 0
   m_Name: SpriteTiro
@@ -113,20 +113,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4616068321683191883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4616068321683191878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b862263aa65b8294bb0691c021421569, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxspeed: 20
-  rig: {fileID: 4694093285949177883}
 --- !u!54 &4694093285949177883
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -143,6 +129,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!114 &4616068321683191883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4616068321683191878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b862263aa65b8294bb0691c021421569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxspeed: 20
+  rig: {fileID: 4694093285949177883}
 --- !u!114 &3573000196833006400
 MonoBehaviour:
   m_ObjectHideFlags: 0

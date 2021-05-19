@@ -23,6 +23,8 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        //enem = gameObject.GetComponent<GameObject>();
+        
         restart = false;
         gameOver = false;
         TextoRestart.gameObject.SetActive(false);

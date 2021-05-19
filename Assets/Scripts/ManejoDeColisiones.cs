@@ -15,7 +15,13 @@ public class ManejoDeColisiones : MonoBehaviour
     void Start()
     {
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
-        gameController = gameControllerObject.GetComponent<GameController>();
+        gameController = gameObject.GetComponent<GameController>();
+                 
+        tomarJugador = gameObject.GetComponent<GameObject>(); // NO SE SI ERA "gameObject" CON MINUSCULA O CON MAYUSCULA PARA QUE TOME EL OBJ CORRESP
+        tomarDisparoJgdr = gameObject.GetComponent<GameObject>();
+
+        tomarEnemigo = gameObject.GetComponent<GameObject>();
+        tomarDisparoEnem = gameObject.GetComponent<GameObject>();
     }
 
     

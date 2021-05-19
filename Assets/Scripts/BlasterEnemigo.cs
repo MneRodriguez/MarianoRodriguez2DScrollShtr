@@ -8,18 +8,18 @@ public class BlasterEnemigo : MonoBehaviour
     public Transform spawnDeDisparo;
 
     public float retrasoDisparo = 0.5f;
-    public float cadenciaDisparo = 1.1f;
+    public float cadenciaDisparo = 1.7f;
 
-    public float velDisparo = 100f;
-    public Rigidbody rig;
-
+    public float velDisparo = 15f;
+    public Rigidbody2D rbody;
+    
     void Start()
     {
-        rig.GetComponent<Rigidbody>();
-        
-        InvokeRepeating("DisparoEnemigo", retrasoDisparo, cadenciaDisparo);
+        Rigidbody2D rBody = GetComponent<Rigidbody2D>();
+        rBody.velocity = -transform.right * velDisparo; // EL "transform.right" LLEVA SIMBOLO NEGATIVO PARA QUE VAYA A LA IZQ, PORQUE NO HAY "transform.left"
 
-        rig.velocity = -transform.right * velDisparo; // EL "transform.right" LLEVA SIMBOLO NEGATIVO PARA QUE VAYA A LA IZQ, PORQUE NO HAY "transform.left"
+        InvokeRepeating("DisparoEnemigo", retrasoDisparo, cadenciaDisparo /2); // DIVIDO POR 2 PARA QUE DISPAREN CON MAYOR FRECUENCIA
+                
     }
 
     

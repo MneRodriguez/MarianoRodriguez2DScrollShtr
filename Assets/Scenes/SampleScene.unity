@@ -453,18 +453,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &354211397
+--- !u!1001 &452666677
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 674236536807925476, guid: 501ba45383ba544428c2071893910cf4,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1095712093752249024, guid: 501ba45383ba544428c2071893910cf4,
         type: 3}
       propertyPath: m_Name
@@ -530,19 +525,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3824250592695299837, guid: 501ba45383ba544428c2071893910cf4,
+        type: 3}
+      propertyPath: spawnDeDisparo
+      value: 
+      objectReference: {fileID: 452666678}
+    - target: {fileID: 3824250592695299837, guid: 501ba45383ba544428c2071893910cf4,
+        type: 3}
+      propertyPath: cadenciaDisparo
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824250592695299837, guid: 501ba45383ba544428c2071893910cf4,
+        type: 3}
+      propertyPath: retrasoDisparo
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 501ba45383ba544428c2071893910cf4, type: 3}
---- !u!4 &354211398 stripped
+--- !u!4 &452666678 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2992462331583258316, guid: 501ba45383ba544428c2071893910cf4,
+  m_CorrespondingSourceObject: {fileID: 2472332328870889284, guid: 501ba45383ba544428c2071893910cf4,
     type: 3}
-  m_PrefabInstance: {fileID: 354211397}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &354211399 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1095712093752249024, guid: 501ba45383ba544428c2071893910cf4,
-    type: 3}
-  m_PrefabInstance: {fileID: 354211397}
+  m_PrefabInstance: {fileID: 452666677}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &511314845
 GameObject:
@@ -793,8 +797,8 @@ GameObject:
   m_Component:
   - component: {fileID: 610593997}
   - component: {fileID: 610593996}
-  - component: {fileID: 610593998}
   - component: {fileID: 610593999}
+  - component: {fileID: 610593998}
   - component: {fileID: 610594000}
   m_Layer: 0
   m_Name: SpriteJgdr
@@ -912,8 +916,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tomarJugador: {fileID: 0}
   tomarDisparoJgdr: {fileID: 0}
-  tomarEnemigo: {fileID: 354211399}
-  tomarDisparoEnem: {fileID: 0}
+  tomarEnemigo: {fileID: 0}
+  tomarDisparoEnem: {fileID: 6773351511443736338, guid: 019094d485a07e54b9b81f9334cf6b8d,
+    type: 3}
   ValorScore: 0
 --- !u!1 &761373388
 GameObject:
@@ -1074,33 +1079,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345537499}
   m_CullTransparentMesh: 0
---- !u!1 &1662364608
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1662364609}
-  m_Layer: 0
-  m_Name: ZonaSpawnBlstEnem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1662364609
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662364608}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3, y: 0, z: 0}
-  m_LocalScale: {x: 0.75892, y: 1.8973, z: 1.8973}
-  m_Children: []
-  m_Father: {fileID: 354211398}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
