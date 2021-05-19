@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3526177247592941629}
   - component: {fileID: 3824250592695299837}
   - component: {fileID: 2923039211139655449}
-  - component: {fileID: -4071399147270142103}
+  - component: {fileID: -5976749153845384560}
   m_Layer: 0
   m_Name: SpriteNaveEnem
   m_TagString: Enemigo
@@ -140,7 +140,7 @@ MonoBehaviour:
   tomarDisparoEnem: {fileID: 6773351511443736338, guid: 019094d485a07e54b9b81f9334cf6b8d,
     type: 3}
   ValorScore: 0
---- !u!50 &-4071399147270142103
+--- !u!50 &-5976749153845384560
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

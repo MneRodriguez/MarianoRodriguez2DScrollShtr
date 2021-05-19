@@ -27,12 +27,13 @@ public class BlasterEnemigo : MonoBehaviour
     
     void Update()
     {
-        Destroy(gameObject, 8f);
+        
     }
 
     public void DisparoEnemigo()
     {
         Instantiate(disparoEnem, spawnDeDisparo.position, spawnDeDisparo.rotation);
-
+        Destroy(gameObject, 8f); // BORRA LAS NAVES ENEMIGAS AL CABO DE 8 SEGUNDOS, PERO LOS DISPAROS SIGUEN SU CURSO SIN BORRARSE (arreglar)
+        
     }
 }

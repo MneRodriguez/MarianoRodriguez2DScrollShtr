@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -9,14 +10,17 @@ public class GameController : MonoBehaviour
     public Vector3 valoresSpawn;
     public int contEnem;
         
-    private int score;
+    public int score;
     public Text TextoScore;
 
     public Text TextoRestart;
-    private bool restart;
+    public bool restart;
+
+    public Text TextoGanaste;
+    public bool ganaste;
 
     public Text TextoGameOver;
-    private bool gameOver;
+    public bool gameOver;
 
     public float TiempoHastaSpawn;
     public float TiempoHastaEmpezar;
@@ -26,8 +30,11 @@ public class GameController : MonoBehaviour
         //enem = gameObject.GetComponent<GameObject>();
         
         restart = false;
+        ganaste = false;
         gameOver = false;
+
         TextoRestart.gameObject.SetActive(false);
+        TextoGanaste.gameObject.SetActive(false);
         TextoGameOver.gameObject.SetActive(false);
 
         StartCoroutine(SpawnearWaves());
@@ -36,6 +43,7 @@ public class GameController : MonoBehaviour
         ActualizarScore();
 
         
+
     }
 
     
@@ -61,6 +69,14 @@ public class GameController : MonoBehaviour
     {
         score += valor;
         ActualizarScore();
+
+        if (score == 100)
+        {
+            TextoGanaste.gameObject.SetActive(true);
+            ganaste = true;
+            Time.timeScale = 0f;
+        }
+
     }
 
     void ActualizarScore()
@@ -72,5 +88,14 @@ public class GameController : MonoBehaviour
     {
         TextoGameOver.gameObject.SetActive(true);
         gameOver = true;
+
+        TextoRestart.gameObject.SetActive(true);
+        restart = true;
+        Time.timeScale = 0f;
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 }
