@@ -96,7 +96,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -137,7 +137,8 @@ MonoBehaviour:
   tomarDisparoJgdr: {fileID: 4616068321683191878, guid: 0ec635af05615b945aa6a131517941ae,
     type: 3}
   tomarEnemigo: {fileID: 0}
-  tomarDisparoEnem: {fileID: 0}
+  tomarDisparoEnem: {fileID: 6773351511443736338, guid: 019094d485a07e54b9b81f9334cf6b8d,
+    type: 3}
   ValorScore: 0
 --- !u!50 &-4071399147270142103
 Rigidbody2D:
