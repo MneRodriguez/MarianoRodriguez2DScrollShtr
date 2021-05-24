@@ -17,11 +17,11 @@ public class ManejoDeColisiones : MonoBehaviour
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
         gameController = gameObject.GetComponent<GameController>();
                  
-        tomarJugador = gameObject.GetComponent<GameObject>(); // TOMA SPRITE NAVE JUGADOR
-        tomarDisparoJgdr = gameObject.GetComponent<GameObject>(); // TOMA SPRITE TIRO DEL JUGADOR
+        //tomarJugador = gameObject.GetComponent<GameObject>(); // TOMA SPRITE NAVE JUGADOR
+        //tomarDisparoJgdr = gameObject.GetComponent<GameObject>(); // TOMA SPRITE TIRO DEL JUGADOR
 
-        tomarEnemigo = gameObject.GetComponent<GameObject>(); // TOMA SPRITE NAVE ENEM
-        tomarDisparoEnem = gameObject.GetComponent<GameObject>(); // TOMA SPRITE TIRO ENEM
+        //tomarEnemigo = gameObject.GetComponent<GameObject>(); // TOMA SPRITE NAVE ENEM
+        //tomarDisparoEnem = gameObject.GetComponent<GameObject>(); // TOMA SPRITE TIRO ENEM
     }
 
     

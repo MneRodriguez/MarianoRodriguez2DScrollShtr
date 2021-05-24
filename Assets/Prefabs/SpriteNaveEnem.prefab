@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6655418950749149884}
   - component: {fileID: 3526177247592941629}
   - component: {fileID: 3824250592695299837}
-  - component: {fileID: 2923039211139655449}
   - component: {fileID: -5976749153845384560}
   m_Layer: 0
   m_Name: SpriteNaveEnem
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1095712093752249024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.9, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0}
   m_Children:
   - {fileID: 2472332328870889284}
   m_Father: {fileID: 0}
@@ -121,25 +120,6 @@ MonoBehaviour:
   cadenciaDisparo: 1.1
   velDisparo: 15
   rbody: {fileID: 0}
---- !u!114 &2923039211139655449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095712093752249024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7368b0c67d17bb64f81e9da8cff22046, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tomarJugador: {fileID: 0}
-  tomarDisparoJgdr: {fileID: 4616068321683191878, guid: 0ec635af05615b945aa6a131517941ae,
-    type: 3}
-  tomarEnemigo: {fileID: 0}
-  tomarDisparoEnem: {fileID: 6773351511443736338, guid: 019094d485a07e54b9b81f9334cf6b8d,
-    type: 3}
-  ValorScore: 0
 --- !u!50 &-5976749153845384560
 Rigidbody2D:
   serializedVersion: 4

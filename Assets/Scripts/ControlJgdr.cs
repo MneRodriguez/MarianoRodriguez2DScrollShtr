@@ -38,5 +38,19 @@ public class ControlJgdr : MonoBehaviour
                                 
     }
 
-    
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("TiroEnem"))
+        {
+            Destroy(gameObject);
+            Time.timeScale = 0.0f;
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
 }

@@ -36,4 +36,13 @@ public class BlasterEnemigo : MonoBehaviour
         Destroy(gameObject, 8f); // BORRA LAS NAVES ENEMIGAS AL CABO DE 8 SEGUNDOS, PERO LOS DISPAROS SIGUEN SU CURSO SIN BORRARSE (arreglar)
         
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+            Time.timeScale = 0f;
+        }
+    }
 }
