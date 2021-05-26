@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public GameObject enem;
+    public float velocidadNaveEnemiga;
     public Vector3 valoresSpawn;
     public int contEnem;
         
@@ -58,8 +59,10 @@ public class GameController : MonoBehaviour
         {
             yield return new WaitForSeconds(TiempoHastaEmpezar);
             Vector3 posSpawn = new Vector3(Random.Range(+valoresSpawn.x, valoresSpawn.x), Random.Range(-valoresSpawn.y, valoresSpawn.y), valoresSpawn.z);
-            Instantiate(enem, posSpawn, Quaternion.identity);
-            //posSpawn.x--;
+            GameObject clonNave = Instantiate(enem, posSpawn, Quaternion.identity);
+            Rigidbody2D rb = clonNave.GetComponent<Rigidbody2D>();
+            rb.AddForce(Vector3.left * velocidadNaveEnemiga, ForceMode2D.Impulse);
+            
             yield return new WaitForSeconds(TiempoHastaSpawn);
         }
                 
@@ -70,7 +73,7 @@ public class GameController : MonoBehaviour
         score += valor;
         ActualizarScore();
 
-        if (score == 100)
+        if (score >= 100) // mayor o igual, por sin cae justo en el 100 al sumar. 
         {
             TextoGanaste.gameObject.SetActive(true);
             ganaste = true;

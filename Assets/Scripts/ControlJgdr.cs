@@ -6,22 +6,26 @@ public class ControlJgdr : MonoBehaviour
 {
     //public Sprite spriteR;
 
-    float maxSpeed = 40f;
+    float maxSpeed = 40f; // se usa ?
 
+    private GameController gameController;
     public GameObject tiro;    
     public Transform zonaSpawnTiro;
+    public float velocidadTiro;
 
-    
-    void Start()
+
+    private void Start()
     {
-        
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
-        
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            Instantiate(tiro, zonaSpawnTiro.position, zonaSpawnTiro.rotation);
+        
+        GameObject clonTiro =  Instantiate(tiro, zonaSpawnTiro.position, zonaSpawnTiro.rotation);
+        Rigidbody2D rb = clonTiro.GetComponent<Rigidbody2D>();
+        rb.AddForce(Vector3.right * velocidadTiro, ForceMode2D.Impulse);
             
         }
         
@@ -38,19 +42,18 @@ public class ControlJgdr : MonoBehaviour
                                 
     }
 
-    public void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("TiroEnem"))
+        if(collision.CompareTag("TiroEnem"))
         {
-            Destroy(gameObject);
-            Time.timeScale = 0.0f;
-        }
+            Debug.Log("Tiro a la nave");
+            Destroy(this.gameObject);
+            gameController.GameOver();
 
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
+            // aca tendrias que poner un cartel de perdiste, reiniciar, etc. 
+
         }
+             
     }
-
-
+ 
 }

@@ -473,6 +473,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2992462331583258316, guid: 501ba45383ba544428c2071893910cf4,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992462331583258316, guid: 501ba45383ba544428c2071893910cf4,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.9
       objectReference: {fileID: 0}
@@ -488,6 +493,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2992462331583258316, guid: 501ba45383ba544428c2071893910cf4,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992462331583258316, guid: 501ba45383ba544428c2071893910cf4,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -500,16 +510,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992462331583258316, guid: 501ba45383ba544428c2071893910cf4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992462331583258316, guid: 501ba45383ba544428c2071893910cf4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2992462331583258316, guid: 501ba45383ba544428c2071893910cf4,
         type: 3}
@@ -533,13 +533,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3824250592695299837, guid: 501ba45383ba544428c2071893910cf4,
         type: 3}
-      propertyPath: spawnDeDisparo
+      propertyPath: rbody
       value: 
-      objectReference: {fileID: 452666678}
-    - target: {fileID: 3824250592695299837, guid: 501ba45383ba544428c2071893910cf4,
-        type: 3}
-      propertyPath: cadenciaDisparo
-      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 3824250592695299837, guid: 501ba45383ba544428c2071893910cf4,
         type: 3}
@@ -548,8 +543,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3824250592695299837, guid: 501ba45383ba544428c2071893910cf4,
         type: 3}
-      propertyPath: rbody
+      propertyPath: spawnDeDisparo
       value: 
+      objectReference: {fileID: 452666678}
+    - target: {fileID: 3824250592695299837, guid: 501ba45383ba544428c2071893910cf4,
+        type: 3}
+      propertyPath: cadenciaDisparo
+      value: 1.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 501ba45383ba544428c2071893910cf4, type: 3}
@@ -810,7 +810,6 @@ GameObject:
   - component: {fileID: 610593996}
   - component: {fileID: 610593999}
   - component: {fileID: 610593998}
-  - component: {fileID: 610594000}
   m_Layer: 0
   m_Name: SpriteJgdr
   m_TagString: Player
@@ -897,6 +896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiro: {fileID: 4616068321683191878, guid: 0ec635af05615b945aa6a131517941ae, type: 3}
   zonaSpawnTiro: {fileID: 761373389}
+  velocidadTiro: 30
 --- !u!70 &610593999
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -913,24 +913,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.02}
   m_Size: {x: 0.6, y: 0.4}
   m_Direction: 1
---- !u!114 &610594000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610593995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7368b0c67d17bb64f81e9da8cff22046, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tomarJugador: {fileID: 0}
-  tomarDisparoJgdr: {fileID: 0}
-  tomarEnemigo: {fileID: 0}
-  tomarDisparoEnem: {fileID: 6773351511443736338, guid: 019094d485a07e54b9b81f9334cf6b8d,
-    type: 3}
-  ValorScore: 0
 --- !u!1 &761373388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enem: {fileID: 1095712093752249024, guid: 501ba45383ba544428c2071893910cf4, type: 3}
+  velocidadNaveEnemiga: 10
   valoresSpawn: {x: 18, y: 9, z: 0}
   contEnem: 20
   score: 0

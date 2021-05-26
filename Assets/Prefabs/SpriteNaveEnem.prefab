@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3526177247592941629}
   - component: {fileID: 3824250592695299837}
   - component: {fileID: -5976749153845384560}
+  - component: {fileID: 906771355224173806}
   m_Layer: 0
   m_Name: SpriteNaveEnem
   m_TagString: Enemigo
@@ -118,7 +119,7 @@ MonoBehaviour:
   spawnDeDisparo: {fileID: 2472332328870889284}
   retrasoDisparo: 0.5
   cadenciaDisparo: 1.1
-  velDisparo: 15
+  velDisparo: 50
   rbody: {fileID: 0}
 --- !u!50 &-5976749153845384560
 Rigidbody2D:
@@ -135,12 +136,25 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 4
+--- !u!114 &906771355224173806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095712093752249024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7368b0c67d17bb64f81e9da8cff22046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ValorScore: 10
 --- !u!1 &5336354111203295287
 GameObject:
   m_ObjectHideFlags: 0
