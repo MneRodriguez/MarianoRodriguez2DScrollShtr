@@ -26,6 +26,12 @@ public class GameController : MonoBehaviour
     public float TiempoHastaSpawn;
     public float TiempoHastaEmpezar;
 
+
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
+
     void Start()
     {
         //enem = gameObject.GetComponent<GameObject>();
@@ -50,7 +56,14 @@ public class GameController : MonoBehaviour
     
     void Update()
     {
-        
+      
+
+            if (gameOver && Input.GetKeyDown(KeyCode.R))
+
+            {
+                SceneManager.LoadScene(0);
+            }
+       
     }
 
     IEnumerator SpawnearWaves() // RUTINA QUE GENERA OLEADAS DE NAVES ENEMIGAS CADA CIERTO TIEMPO
@@ -94,11 +107,11 @@ public class GameController : MonoBehaviour
 
         TextoRestart.gameObject.SetActive(true);
         restart = true;
-        Time.timeScale = 0f;
+       Time.timeScale = 0f;
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(0);
         }
     }
 }
